@@ -7,50 +7,50 @@ public class ColorAPITest extends BaseAPITest{
     @Test
     public void testFetchAllColors() {
         given()
-                .param("format", "json")
+                .param("format", "xml")
                 .when()
-                .get()
+                .get("http://www.colourlovers.com/api/colors")
                 .then()
                 .statusCode(200)
-                .contentType(ContentType.JSON)
+                .header("Content-Type", "test/xml; charset=utf-8")
                 .body("id", not(empty()));
     }
 
-//    @Test
-//    public void testFetchNewColors() {
-//        given()
-//                .param("format", "json")
-//                .when()
-//                .get("/new")
-//                .then()
-//                .statusCode(200)
-//                .contentType(ContentType.JSON)
-//                .body("id", not(empty()));
-//    }
-//
-//    @Test
-//    public void testFetchTopColors() {
-//        given()
-//                .param("format", "json")
-//                .when()
-//                .get("/top")
-//                .then()
-//                .statusCode(200)
-//                .contentType(ContentType.JSON)
-//                .body("id", not(empty()));
-//    }
-//
-//    @Test
-//    public void testFetchRandomColors() {
-//        given()
-//                .param("format", "json")
-//                .when()
-//                .get("/random")
-//                .then()
-//                .statusCode(200)
-//                .contentType(ContentType.JSON)
-//                .body("id", not(empty()));
-//    }
+    @Test
+    public void testFetchNewColors() {
+        given()
+                .param("format", "xml")
+                .when()
+                .get("http://www.colourlovers.com/api/colors/new")
+                .then()
+                .statusCode(200)
+                .header("Content-Type", "test/xml; charset=utf-8")
+                .body("id", not(empty()));
+    }
+
+    @Test
+    public void testFetchTopColors() {
+        given()
+                .param("format", "xml")
+                .when()
+                .get("http://www.colourlovers.com/api/colors/top")
+                .then()
+                .statusCode(200)
+                .header("Content-Type", "test/xml; charset=utf-8")
+                .body("id", not(empty()));
+    }
+
+    @Test
+    public void testFetchRandomColors() {
+        given()
+                .param("format", "xml")
+                .when()
+                .get("http://www.colourlovers.com/api/colors/random")
+                .then()
+                .statusCode(200)
+                .header("Content-Type", "test/xml; charset=utf-8")
+                .body("id", not(empty()));
+    }
 
 
 }
