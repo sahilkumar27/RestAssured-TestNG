@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-07-14T15:40:34 IST" name="Default Suite" finished-at="2024-07-14T15:40:42 IST" duration-ms="7997">
+    <groups>
+    </groups>
+    <test started-at="2024-07-14T15:40:34 IST" name="RestAssignment" finished-at="2024-07-14T15:40:42 IST" duration-ms="7997">
+      <class name="ReqApiTest">
+        <test-method signature="test1()[pri:0, instance:ReqApiTest@45afc369]" started-at="2024-07-14T15:40:34 IST" name="test1" finished-at="2024-07-14T15:40:41 IST" duration-ms="7375" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method signature="test2()[pri:0, instance:ReqApiTest@45afc369]" started-at="2024-07-14T15:40:41 IST" name="test2" finished-at="2024-07-14T15:40:42 IST" duration-ms="547" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+      </class> <!-- ReqApiTest -->
+    </test> <!-- RestAssignment -->
+  </suite> <!-- Default Suite -->
+</testng-results>
